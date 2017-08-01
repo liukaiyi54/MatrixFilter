@@ -13,6 +13,7 @@
 		4CC0F6531F2EC8A900CF78DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6511F2EC8A900CF78DA /* Main.storyboard */; };
 		4CC0F6551F2EC8A900CF78DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6541F2EC8A900CF78DA /* Assets.xcassets */; };
 		4CC0F6581F2EC8A900CF78DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6561F2EC8A900CF78DA /* LaunchScreen.storyboard */; };
+		4CC0F6611F2EC91200CF78DA /* FilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6601F2EC91200CF78DA /* FilterManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		4CC0F6541F2EC8A900CF78DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CC0F6571F2EC8A900CF78DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CC0F6591F2EC8A900CF78DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC0F65F1F2EC91200CF78DA /* FilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterManager.h; sourceTree = "<group>"; };
+		4CC0F6601F2EC91200CF78DA /* FilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		4CC0F6471F2EC8A900CF78DA /* MatrixFilter */ = {
 			isa = PBXGroup;
 			children = (
+				4CC0F65F1F2EC91200CF78DA /* FilterManager.h */,
+				4CC0F6601F2EC91200CF78DA /* FilterManager.m */,
 				4CC0F64B1F2EC8A900CF78DA /* AppDelegate.h */,
 				4CC0F64C1F2EC8A900CF78DA /* AppDelegate.m */,
 				4CC0F64E1F2EC8A900CF78DA /* ViewController.h */,
@@ -154,6 +159,7 @@
 				4CC0F6501F2EC8A900CF78DA /* ViewController.m in Sources */,
 				4CC0F64D1F2EC8A900CF78DA /* AppDelegate.m in Sources */,
 				4CC0F64A1F2EC8A900CF78DA /* main.m in Sources */,
+				4CC0F6611F2EC91200CF78DA /* FilterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
