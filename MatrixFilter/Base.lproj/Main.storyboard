@@ -256,7 +256,7 @@
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsE-Vw-NyM"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-fW-zgf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haizhu.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-fW-zgf">
                                 <rect key="frame" x="16" y="36" width="343" height="372"/>
                             </imageView>
                         </subviews>
@@ -382,4 +382,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="haizhu.jpeg" width="1280" height="1280"/>
+    </resources>
 </document>

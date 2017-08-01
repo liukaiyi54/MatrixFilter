@@ -28,6 +28,9 @@
         textField.delegate = self;
     }
     
+    self.imageView.image = [UIImage imageNamed:@"haizhu.jpeg"];
+    self.cachedImage = self.imageView.image;
+    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(keyboardOnScreen:) name:UIKeyboardDidShowNotification object:nil];
     [center addObserver:self selector:@selector(showImage) name:UITextFieldTextDidChangeNotification object:nil];
@@ -40,7 +43,7 @@
 }
 
 - (IBAction)savePhoto:(UIButton *)sender {
-    
+    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
 #pragma mark - delegate
@@ -49,6 +52,14 @@
     self.imageView.image = image;
     self.cachedImage = image;
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"保存成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -102,8 +113,6 @@
     CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
     
     self.keyboardHeight = CGRectGetHeight(keyboardFrame);
-    
-    NSLog(@"keyboardFrame: %@", NSStringFromCGRect(keyboardFrame));
 }
 
 @end

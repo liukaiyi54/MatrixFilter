@@ -14,6 +14,7 @@
 		4CC0F6551F2EC8A900CF78DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6541F2EC8A900CF78DA /* Assets.xcassets */; };
 		4CC0F6581F2EC8A900CF78DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6561F2EC8A900CF78DA /* LaunchScreen.storyboard */; };
 		4CC0F6611F2EC91200CF78DA /* FilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6601F2EC91200CF78DA /* FilterManager.m */; };
+		4CC0F6631F30B3F400CF78DA /* haizhu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6621F30B3F400CF78DA /* haizhu.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4CC0F6591F2EC8A900CF78DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CC0F65F1F2EC91200CF78DA /* FilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterManager.h; sourceTree = "<group>"; };
 		4CC0F6601F2EC91200CF78DA /* FilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterManager.m; sourceTree = "<group>"; };
+		4CC0F6621F30B3F400CF78DA /* haizhu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = haizhu.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4CC0F64E1F2EC8A900CF78DA /* ViewController.h */,
 				4CC0F64F1F2EC8A900CF78DA /* ViewController.m */,
 				4CC0F6511F2EC8A900CF78DA /* Main.storyboard */,
+				4CC0F6621F30B3F400CF78DA /* haizhu.jpeg */,
 				4CC0F6541F2EC8A900CF78DA /* Assets.xcassets */,
 				4CC0F6561F2EC8A900CF78DA /* LaunchScreen.storyboard */,
 				4CC0F6591F2EC8A900CF78DA /* Info.plist */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC0F6581F2EC8A900CF78DA /* LaunchScreen.storyboard in Resources */,
+				4CC0F6631F30B3F400CF78DA /* haizhu.jpeg in Resources */,
 				4CC0F6551F2EC8A900CF78DA /* Assets.xcassets in Resources */,
 				4CC0F6531F2EC8A900CF78DA /* Main.storyboard in Resources */,
 			);
