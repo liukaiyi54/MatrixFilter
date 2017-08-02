@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) UIImage *cachedImage;
 @property (nonatomic, assign) CGFloat keyboardHeight;
+@property (nonatomic, assign) BOOL isFirstTime;
 
 @end
 
@@ -23,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.isFirstTime = YES;
     
     for (UITextField *textField in self.textFields) {
         textField.delegate = self;
@@ -65,6 +68,11 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     for (UITextField *field in self.textFields) {
         [field resignFirstResponder];
+        [UIView animateWithDuration:0.3 animations:^{
+            CGRect frame = self.view.frame;
+            frame.origin.y = 0.0;
+            self.view.frame = frame;
+        }];
     }
 }
 
@@ -73,7 +81,8 @@
     if (CGRectGetHeight(self.view.frame) > 700) {
         extraPaddingForPlus = 10.0f;
     }
-    CGFloat offset = self.view.frame.size.height - (textField.frame.origin.y + textField.frame.size.height + self.keyboardHeight + extraPaddingForPlus);
+
+    CGFloat offset = 42 - self.keyboardHeight;
     if (offset <= 0) {
         [UIView animateWithDuration:0.3 animations:^{
             CGRect frame = self.view.frame;
@@ -81,15 +90,6 @@
             self.view.frame = frame;
         }];
     }
-    return YES;
-}
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    [UIView animateWithDuration:0.3 animations:^{
-        CGRect frame = self.view.frame;
-        frame.origin.y = 0.0;
-        self.view.frame = frame;
-    }];
     return YES;
 }
 
@@ -113,6 +113,18 @@
     CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
     
     self.keyboardHeight = CGRectGetHeight(keyboardFrame);
+    
+    if (self.isFirstTime) {
+        CGFloat offset = 42 - self.keyboardHeight;
+        if (offset <= 0) {
+            [UIView animateWithDuration:0.3 animations:^{
+                CGRect frame = self.view.frame;
+                frame.origin.y = offset;
+                self.view.frame = frame;
+            }];
+        }
+        self.isFirstTime = NO;
+    }
 }
 
 @end
