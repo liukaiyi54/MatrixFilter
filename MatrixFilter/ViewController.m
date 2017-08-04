@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WebViewController.h"
 
 #import "FilterManager.h"
 
@@ -47,6 +48,12 @@
 
 - (IBAction)savePhoto:(UIButton *)sender {
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (IBAction)didTapDetailButton:(UIButton *)sender {
+    WebViewController *controller = [[WebViewController alloc] init];
+    controller.url = [NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - delegate
