@@ -7,7 +7,6 @@
 //
 
 #import "WebViewController.h"
-//#import "NativeInjector.h"
 
 @interface WebViewController () <UIWebViewDelegate>
 
@@ -43,12 +42,22 @@
     [self.view addSubview:self.webView];
     [self.view addSubview:self.indicator];
     self.indicator.center = self.indicator.superview.center;
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 40, 20, 20)];
+    [button setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(didTapClose:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button];
 }
 
 - (void)loadWebView {
     [self.indicator startAnimating];
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:request];
+}
+
+- (void)didTapClose:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (UIWebView *)webView {

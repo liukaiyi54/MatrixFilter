@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WebViewController.h"
+#import "SVModalWebViewController.h"
 
 #import "FilterManager.h"
 
@@ -51,9 +52,13 @@
 }
 
 - (IBAction)didTapDetailButton:(UIButton *)sender {
-    WebViewController *controller = [[WebViewController alloc] init];
-    controller.url = [NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"];
-    [self presentViewController:controller animated:YES completion:nil];
+    SVModalWebViewController *webView = [[SVModalWebViewController alloc] initWithURL:[NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"]];
+    
+    [self presentViewController:webView animated:YES completion:nil];
+    
+//    WebViewController *controller = [[WebViewController alloc] init];
+//    controller.url = [NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"];
+//    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark - delegate
@@ -121,7 +126,7 @@
     
     self.keyboardHeight = CGRectGetHeight(keyboardFrame);
     
-    if (self.isFirstTime) {
+    if (self.isFirstTime || self.keyboardHeight > 216) {
         CGFloat offset = 42 - self.keyboardHeight;
         if (offset <= 0) {
             [UIView animateWithDuration:0.3 animations:^{
