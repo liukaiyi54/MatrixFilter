@@ -11,6 +11,7 @@
 #import "SVModalWebViewController.h"
 
 #import "FilterManager.h"
+#import "FileManager.h"
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 
@@ -58,12 +59,30 @@
 }
 
 - (IBAction)saveData:(UIButton *)sender {
-    float matrix[20];
+    NSMutableArray *matrix = [[NSMutableArray alloc] initWithCapacity:20];
     
     for (NSInteger i = 0; i < self.textFields.count; i++) {
         UITextField *textField = self.textFields[i];
-        matrix[i] = textField.text.floatValue;
+        [matrix addObject:[NSNumber numberWithFloat:textField.text.floatValue]];
     }
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"保存滤镜参数" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"输入名称";
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:cancelAction];
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UITextField *textField = alertController.textFields.firstObject;
+        if (textField.text) {
+            FileManager *manager = [FileManager sharedInstance];
+            [manager.file setObject:matrix forKey:textField.text];
+        }
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alertController addAction:saveAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark - delegate
