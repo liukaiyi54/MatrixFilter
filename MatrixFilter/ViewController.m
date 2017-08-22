@@ -55,10 +55,15 @@
     SVModalWebViewController *webView = [[SVModalWebViewController alloc] initWithURL:[NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"]];
     
     [self presentViewController:webView animated:YES completion:nil];
+}
+
+- (IBAction)saveData:(UIButton *)sender {
+    float matrix[20];
     
-//    WebViewController *controller = [[WebViewController alloc] init];
-//    controller.url = [NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"];
-//    [self presentViewController:controller animated:YES completion:nil];
+    for (NSInteger i = 0; i < self.textFields.count; i++) {
+        UITextField *textField = self.textFields[i];
+        matrix[i] = textField.text.floatValue;
+    }
 }
 
 #pragma mark - delegate
@@ -78,14 +83,13 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    for (UITextField *field in self.textFields) {
-        [field resignFirstResponder];
-        [UIView animateWithDuration:0.3 animations:^{
-            CGRect frame = self.view.frame;
-            frame.origin.y = 0.0;
-            self.view.frame = frame;
-        }];
-    }
+    [self.view endEditing:YES];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect frame = self.view.frame;
+        frame.origin.y = 0.0;
+        self.view.frame = frame;
+    }];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
