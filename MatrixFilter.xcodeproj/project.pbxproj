@@ -21,6 +21,9 @@
 		4C1A75CE1F36C0BF002C1379 /* SVWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75BE1F36C0BF002C1379 /* SVWebViewControllerActivitySafari@2x.png */; };
 		4C1A75CF1F36C0BF002C1379 /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75C01F36C0BF002C1379 /* SVWebViewControllerActivity.m */; };
 		4C613A121F4BDAE500E645AB /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A111F4BDAE500E645AB /* FileManager.m */; };
+		4C613A151F4C201800E645AB /* MatrixDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A141F4C201800E645AB /* MatrixDataViewController.m */; };
+		4C613A191F4C5DE300E645AB /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A171F4C5DE300E645AB /* CollectionViewCell.m */; };
+		4C613A1A1F4C5DE300E645AB /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C613A181F4C5DE300E645AB /* CollectionViewCell.xib */; };
 		4CC0F64A1F2EC8A900CF78DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6491F2EC8A900CF78DA /* main.m */; };
 		4CC0F64D1F2EC8A900CF78DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F64C1F2EC8A900CF78DA /* AppDelegate.m */; };
 		4CC0F6501F2EC8A900CF78DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F64F1F2EC8A900CF78DA /* ViewController.m */; };
@@ -62,6 +65,11 @@
 		4C1A75C21F36C0BF002C1379 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 		4C613A101F4BDAE500E645AB /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		4C613A111F4BDAE500E645AB /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		4C613A131F4C201800E645AB /* MatrixDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixDataViewController.h; sourceTree = "<group>"; };
+		4C613A141F4C201800E645AB /* MatrixDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatrixDataViewController.m; sourceTree = "<group>"; };
+		4C613A161F4C5DE300E645AB /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		4C613A171F4C5DE300E645AB /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		4C613A181F4C5DE300E645AB /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		4CC0F6451F2EC8A900CF78DA /* MatrixFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC0F6491F2EC8A900CF78DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CC0F64B1F2EC8A900CF78DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +177,11 @@
 				4CC0F64F1F2EC8A900CF78DA /* ViewController.m */,
 				4CCCF0391F32026A00C67C22 /* WebViewController.h */,
 				4CCCF03A1F32026A00C67C22 /* WebViewController.m */,
+				4C613A131F4C201800E645AB /* MatrixDataViewController.h */,
+				4C613A141F4C201800E645AB /* MatrixDataViewController.m */,
+				4C613A161F4C5DE300E645AB /* CollectionViewCell.h */,
+				4C613A171F4C5DE300E645AB /* CollectionViewCell.m */,
+				4C613A181F4C5DE300E645AB /* CollectionViewCell.xib */,
 				4CC0F6511F2EC8A900CF78DA /* Main.storyboard */,
 				4CC0F6621F30B3F400CF78DA /* haizhu.jpeg */,
 				4CC0F6541F2EC8A900CF78DA /* Assets.xcassets */,
@@ -260,6 +273,7 @@
 				4C1A75CE1F36C0BF002C1379 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
 				4C1A75CA1F36C0BF002C1379 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				4CC0F6631F30B3F400CF78DA /* haizhu.jpeg in Resources */,
+				4C613A1A1F4C5DE300E645AB /* CollectionViewCell.xib in Resources */,
 				4C1A75C51F36C0BF002C1379 /* SVWebViewController.bundle in Resources */,
 				4C1A75CC1F36C0BF002C1379 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
 				4C1A75C31F36C0BF002C1379 /* SVWebViewController.strings in Resources */,
@@ -280,6 +294,7 @@
 				4CC0F6501F2EC8A900CF78DA /* ViewController.m in Sources */,
 				4CCCF03B1F32026A00C67C22 /* WebViewController.m in Sources */,
 				4CC0F64D1F2EC8A900CF78DA /* AppDelegate.m in Sources */,
+				4C613A151F4C201800E645AB /* MatrixDataViewController.m in Sources */,
 				4CC0F64A1F2EC8A900CF78DA /* main.m in Sources */,
 				4C1A75C41F36C0BF002C1379 /* SVModalWebViewController.m in Sources */,
 				4C1A75CF1F36C0BF002C1379 /* SVWebViewControllerActivity.m in Sources */,
@@ -287,6 +302,7 @@
 				4CC0F6611F2EC91200CF78DA /* FilterManager.m in Sources */,
 				4C1A75C61F36C0BF002C1379 /* SVWebViewController.m in Sources */,
 				4C1A75C91F36C0BF002C1379 /* SVWebViewControllerActivityChrome.m in Sources */,
+				4C613A191F4C5DE300E645AB /* CollectionViewCell.m in Sources */,
 				4C1A75CD1F36C0BF002C1379 /* SVWebViewControllerActivitySafari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

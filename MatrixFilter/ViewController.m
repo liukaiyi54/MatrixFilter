@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WebViewController.h"
 #import "SVModalWebViewController.h"
+#import "MatrixDataViewController.h"
 
 #import "FilterManager.h"
 #import "FileManager.h"
@@ -52,7 +53,12 @@
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
-- (IBAction)didTapDetailButton:(UIButton *)sender {
+- (IBAction)didTapMatrixData:(id)sender {
+    MatrixDataViewController *vc = [[MatrixDataViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)didTapDetailButton:(id)sender {
     SVModalWebViewController *webView = [[SVModalWebViewController alloc] initWithURL:[NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"]];
     
     [self presentViewController:webView animated:YES completion:nil];
@@ -77,6 +83,7 @@
         if (textField.text) {
             FileManager *manager = [FileManager sharedInstance];
             [manager.file setObject:matrix forKey:textField.text];
+            [manager saveFile];
         }
         [alertController dismissViewControllerAnimated:YES completion:nil];
     }];
