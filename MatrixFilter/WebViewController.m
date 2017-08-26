@@ -31,12 +31,13 @@
     
     [self setupViews];
     [self loadWebView];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(didTapBack)];
 }
 
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    
     self.navigationItem.rightBarButtonItems = nil;
 }
 
@@ -67,6 +68,10 @@
         NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
         [self.webView loadHTMLString:oldHtml baseURL:[NSURL fileURLWithPath:bundlePath]];
     }
+}
+
+- (void)didTapBack {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (UIWebView *)webView {

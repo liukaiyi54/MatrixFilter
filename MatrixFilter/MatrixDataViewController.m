@@ -14,9 +14,10 @@
 
 static NSString *const kCollectionViewCell = @"kCollectionViewCell";
 
-@interface MatrixDataViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface MatrixDataViewController () <UICollectionViewDelegate, UICollectionViewDataSource, CellDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, assign) BOOL showDeleteButton;
 
 @end
 
@@ -28,6 +29,23 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     self.title = @"已保存的滤镜";
     [self setupCollectionView];
     [self.view addSubview:self.collectionView];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(didTapBack)];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.showDeleteButton = NO;
+    if ([FileManager sharedInstance].file.count == 0) {
+        self.navigationItem.rightBarButtonItem = nil;
+    } else {
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"edit"] style:UIBarButtonItemStylePlain target:self action:@selector(didTapEdit:)];
+        [item setImageInsets:UIEdgeInsetsMake(10, 0, 0, 0)];
+        self.navigationItem.rightBarButtonItem = item;
+    }
+    
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDelegate & etc
@@ -41,10 +59,12 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCell forIndexPath:indexPath];
+    cell.delegate = self;
     
     NSDictionary *file = [FileManager sharedInstance].file;
     cell.title = file.allKeys[indexPath.row];
     cell.matrix = file.allValues[indexPath.row];
+    cell.hideDeleteButton = !self.showDeleteButton;
     
     return cell;
 }
@@ -69,6 +89,22 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     return UIEdgeInsetsMake(5, 5, 0, 5);
 }
 
+- (void)deleteCell:(CollectionViewCell *)cell {
+    [self.collectionView performBatchUpdates:^{
+        NSIndexPath *indexpath = [self.collectionView indexPathForCell:cell];
+        NSString *key = [FileManager sharedInstance].file.allKeys[indexpath.row];
+        [[FileManager sharedInstance].file removeObjectForKey:key];
+        [[FileManager sharedInstance] saveFile];
+        
+        [self.collectionView deleteItemsAtIndexPaths:@[indexpath]];
+    } completion:^(BOOL finished) {
+        [self.collectionView reloadData];
+        if ([FileManager sharedInstance].file.count == 0) {
+            self.navigationItem.rightBarButtonItem = nil;
+        }
+    }];
+}
+
 #pragma mark - 
 - (void)setupCollectionView {
     NSString *nibName = NSStringFromClass([CollectionViewCell class]);
@@ -88,6 +124,17 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
         _collectionView.dataSource = self;
     }
     return _collectionView;
+}
+
+- (void)didTapEdit:(UIBarButtonItem *)sender {
+    self.showDeleteButton = !self.showDeleteButton;
+    [sender setImage:[UIImage imageNamed:self.showDeleteButton ? @"checked" : @"edit"]];
+    
+    [self.collectionView reloadData];
+}
+
+- (void)didTapBack {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

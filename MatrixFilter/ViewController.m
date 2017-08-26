@@ -48,6 +48,11 @@
     [self configureButtons];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
 - (IBAction)selectPhoto:(UIButton *)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -199,7 +204,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barTintColor = [UIColor flatMintColor];
     [self.navigationController.navigationBar setTitleTextAttributes:
-     @{NSForegroundColorAttributeName:[UIColor flatWhiteColor]}];
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
 - (void)configureButtons {

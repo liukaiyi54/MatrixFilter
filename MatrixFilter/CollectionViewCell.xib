@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -221,9 +221,27 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dII-zX-QtB">
                         <rect key="frame" x="70" y="114" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-wq-hQQ">
+                        <rect key="frame" x="151" y="109" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="1oO-Ff-SRi"/>
+                            <constraint firstAttribute="width" constant="32" id="OVe-7I-FVS"/>
+                        </constraints>
+                        <state key="normal" image="clear"/>
+                        <connections>
+                            <action selector="didTapDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="tzL-Up-etQ"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd9-mQ-x3Z">
+                        <rect key="frame" x="0.0" y="108" width="183" height="1"/>
+                        <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="IJg-pG-S2N"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
@@ -233,7 +251,10 @@
                 <constraint firstItem="wpt-8l-aUv" firstAttribute="leading" secondItem="u47-uy-AuK" secondAttribute="trailing" id="2nR-6E-Q09"/>
                 <constraint firstItem="wpt-8l-aUv" firstAttribute="leading" secondItem="u47-uy-AuK" secondAttribute="trailing" id="2v7-rs-HBo"/>
                 <constraint firstItem="8Le-Ff-37d" firstAttribute="baseline" secondItem="yCQ-it-2pP" secondAttribute="baseline" id="30R-yB-ULV"/>
+                <constraint firstItem="bZw-wq-hQQ" firstAttribute="top" secondItem="vd9-mQ-x3Z" secondAttribute="bottom" id="624-a2-hbd"/>
+                <constraint firstAttribute="trailing" secondItem="vd9-mQ-x3Z" secondAttribute="trailing" id="6bg-pL-7ZA"/>
                 <constraint firstItem="vGF-rg-Qud" firstAttribute="bottom" secondItem="JaU-p6-eUd" secondAttribute="bottom" id="8Nv-XO-4zR"/>
+                <constraint firstAttribute="bottom" secondItem="bZw-wq-hQQ" secondAttribute="bottom" id="8Th-Rl-1oi"/>
                 <constraint firstItem="U2U-Mi-VMk" firstAttribute="leading" secondItem="l2Z-aU-avm" secondAttribute="trailing" id="8dI-cN-Jn4"/>
                 <constraint firstItem="Xkv-42-79W" firstAttribute="top" secondItem="yCQ-it-2pP" secondAttribute="top" id="9Ts-cP-tGZ"/>
                 <constraint firstItem="JaU-p6-eUd" firstAttribute="leading" secondItem="l2Z-aU-avm" secondAttribute="leading" id="9Ws-Np-ePX"/>
@@ -252,8 +273,10 @@
                 <constraint firstItem="vGF-rg-Qud" firstAttribute="leading" secondItem="JaU-p6-eUd" secondAttribute="trailing" id="NNC-tB-8e3"/>
                 <constraint firstItem="YMf-eW-2fa" firstAttribute="leading" secondItem="gPV-U5-enG" secondAttribute="trailing" id="Neh-wV-B1u"/>
                 <constraint firstItem="dII-zX-QtB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="OAu-kj-DZs"/>
+                <constraint firstItem="vd9-mQ-x3Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ObF-1x-cUY"/>
                 <constraint firstItem="kag-VE-O3r" firstAttribute="leading" secondItem="iaE-o4-NJX" secondAttribute="trailing" id="PBA-Qp-nhg"/>
                 <constraint firstItem="aFt-kt-8UT" firstAttribute="leading" secondItem="k1n-jR-2Su" secondAttribute="trailing" id="POV-d0-pGA"/>
+                <constraint firstAttribute="trailing" secondItem="bZw-wq-hQQ" secondAttribute="trailing" id="QH1-fQ-FLT"/>
                 <constraint firstItem="XyT-lq-uny" firstAttribute="trailing" secondItem="8Le-Ff-37d" secondAttribute="trailing" id="R5a-xD-ADN"/>
                 <constraint firstItem="Xkv-42-79W" firstAttribute="bottom" secondItem="yCQ-it-2pP" secondAttribute="bottom" id="SXf-uz-2q9"/>
                 <constraint firstItem="drl-27-uud" firstAttribute="leading" secondItem="YMf-eW-2fa" secondAttribute="trailing" id="SoF-Zp-49h"/>
@@ -290,6 +313,7 @@
             </constraints>
             <size key="customSize" width="183" height="141"/>
             <connections>
+                <outlet property="deleteButton" destination="bZw-wq-hQQ" id="tE4-QB-uNe"/>
                 <outlet property="titleLabel" destination="dII-zX-QtB" id="Phb-oI-1YZ"/>
                 <outletCollection property="matrixLabels" destination="l2Z-aU-avm" id="B4F-G2-Afs"/>
                 <outletCollection property="matrixLabels" destination="FfJ-cz-OvM" id="yxV-wD-Qoe"/>
@@ -315,4 +339,7 @@
             <point key="canvasLocation" x="-180.5" y="65.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="clear" width="64" height="64"/>
+    </resources>
 </document>
