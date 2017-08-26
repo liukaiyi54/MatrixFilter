@@ -19,6 +19,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.layer.cornerRadius = 4.0f;
+    self.layer.borderColor = [UIColor grayColor].CGColor;
+    self.layer.borderWidth = 1.0f;
 }
 
 - (void)setMatrix:(NSMutableArray *)matrix {

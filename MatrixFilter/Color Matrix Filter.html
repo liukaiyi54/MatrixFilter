@@ -843,6 +843,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <p>Color Matrix Filter--颜色矩阵滤镜，它是Adobe公司flash出的一个滤镜算法。可以在颗粒等级上提供更好的控制方法。</p>
 
 <p>Color Matrix Filter为四行五列的多维矩阵，如图所示<br/>
+
 <img src="15037196879754.jpg" alt=""/>￼</p>
 
 <p>RGBA分别代表红色通道、绿色通道、蓝色通道和alpha通道(不透明度，1是完全不透明，0是完全透明)，offset表示偏移量。计算公式如下：</p>
@@ -860,12 +861,14 @@ alphaResult = a[15] * srcR + a[16] * srcG + a[17] * srcB + a[18] * srcA + a[19]
 <p><img src="15037197790271.jpg" alt=""/>￼</p>
 
 <p>如果你想让绿色通道加倍，将a[6]设为2，结果如下：<br/>
+
 <img src="15037198406812.jpg" alt=""/>￼</p>
 
 <p>如果你想让图中的蓝色和红色数量一样多，那么将a[10]设为1，a[12]设为0，结果如下：<br/>
+
 <img src="15037199411077.jpg" alt=""/>￼</p>
 
-<p>你甚至可以生成一个灰度图</p>
+<p>你甚至可以调整参数，生成一个灰度图</p>
 
 <p><img src="15037201516551.jpg" alt=""/>￼</p>
 

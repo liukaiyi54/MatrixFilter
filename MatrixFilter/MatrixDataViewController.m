@@ -24,7 +24,8 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.title = @"已保存的滤镜";
     [self setupCollectionView];
     [self.view addSubview:self.collectionView];
 }
@@ -64,6 +65,10 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     }
 }
 
+- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(5, 5, 0, 5);
+}
+
 #pragma mark - 
 - (void)setupCollectionView {
     NSString *nibName = NSStringFromClass([CollectionViewCell class]);
@@ -74,8 +79,8 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.minimumLineSpacing = 0.5f;
-        layout.minimumInteritemSpacing = 0.5f;
+        layout.minimumLineSpacing = 2.0f;
+        layout.minimumInteritemSpacing = 2.0f;
         
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor whiteColor];

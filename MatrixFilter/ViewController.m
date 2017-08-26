@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "WebViewController.h"
-#import "SVModalWebViewController.h"
 #import "MatrixDataViewController.h"
 
 #import "FilterManager.h"
@@ -29,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Color Matrix Filter";
     self.isFirstTime = YES;
     
     for (UITextField *textField in self.textFields) {
