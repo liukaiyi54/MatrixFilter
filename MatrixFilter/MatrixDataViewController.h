@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectionViewCell.h"
+
+@class MatrixDataViewController;
+
+@protocol MatrixDataViewControllerDelegate <NSObject>
+
+- (void)MatrixDataViewController:(MatrixDataViewController *)vc didSelectCellAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
 
 @interface MatrixDataViewController : UIViewController
+
+@property (nonatomic, weak) id <MatrixDataViewControllerDelegate> delegate;
 
 @end

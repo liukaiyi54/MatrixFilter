@@ -14,7 +14,7 @@
 #import "FilterManager.h"
 #import "FileManager.h"
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, MatrixDataViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFields;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -55,6 +55,7 @@
 
 - (IBAction)didTapMatrixData:(id)sender {
     MatrixDataViewController *vc = [[MatrixDataViewController alloc] init];
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -133,6 +134,17 @@
         }];
     }
     return YES;
+}
+
+- (void)MatrixDataViewController:(MatrixDataViewController *)vc didSelectCellAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *matrix = [[FileManager sharedInstance].file allValues][indexPath.row];
+    
+    for (NSInteger i = 0; i < self.textFields.count; i++) {
+        UITextField *textField = self.textFields[i];
+        float f = [matrix[i] floatValue];
+        textField.text = [NSString stringWithFormat:@"%.1f", f];
+    }
+    [self showImage];
 }
 
 #pragma mark - private

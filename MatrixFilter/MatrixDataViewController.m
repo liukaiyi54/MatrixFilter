@@ -57,6 +57,13 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     return 10.0f;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(MatrixDataViewController:didSelectCellAtIndexPath:)]) {
+        [self.navigationController popViewControllerAnimated:YES];
+        [self.delegate MatrixDataViewController:self didSelectCellAtIndexPath:indexPath];
+    }
+}
+
 #pragma mark - 
 - (void)setupCollectionView {
     NSString *nibName = NSStringFromClass([CollectionViewCell class]);
