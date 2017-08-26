@@ -20,6 +20,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        [self setupDefaultValue];
         self.hidesBottomBarWhenPushed = YES;
     }
     return self;
@@ -33,36 +34,44 @@
 }
 
 #pragma mark - UIWebViewDelegate
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    
+    self.navigationItem.rightBarButtonItems = nil;
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.indicator stopAnimating];
+    NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    self.title = title;
 }
 
 #pragma mark - private
+- (void)setupDefaultValue {
+}
+
 - (void)setupViews {
     [self.view addSubview:self.webView];
     [self.view addSubview:self.indicator];
-    self.indicator.center = self.indicator.superview.center;
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(20, 40, 20, 20)];
-    [button setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(didTapClose:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:button];
 }
 
 - (void)loadWebView {
     [self.indicator startAnimating];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
-    [self.webView loadRequest:request];
-}
-
-- (void)didTapClose:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if (self.url) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+        return;
+    }
+    if (self.path) {
+        NSString *oldHtml = [NSString stringWithContentsOfFile:self.path encoding:NSUTF8StringEncoding error:nil];
+        NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
+        [self.webView loadHTMLString:oldHtml baseURL:[NSURL fileURLWithPath:bundlePath]];
+    }
 }
 
 - (UIWebView *)webView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+        _webView = [[UIWebView alloc] initWithFrame:self.view.frame];
         _webView.delegate = self;
     }
     return _webView;

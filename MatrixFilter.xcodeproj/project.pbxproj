@@ -20,6 +20,13 @@
 		4C1A75CD1F36C0BF002C1379 /* SVWebViewControllerActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75BD1F36C0BF002C1379 /* SVWebViewControllerActivitySafari.m */; };
 		4C1A75CE1F36C0BF002C1379 /* SVWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A75BE1F36C0BF002C1379 /* SVWebViewControllerActivitySafari@2x.png */; };
 		4C1A75CF1F36C0BF002C1379 /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A75C01F36C0BF002C1379 /* SVWebViewControllerActivity.m */; };
+		4C2915BA1F513A24006BAB1D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2915B81F513A24006BAB1D /* WebViewController.m */; };
+		4C2915C31F513D7C006BAB1D /* Color Matrix Filter.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915BB1F513A9D006BAB1D /* Color Matrix Filter.html */; };
+		4C2915CE1F513E29006BAB1D /* 15037198406812.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915C91F513E28006BAB1D /* 15037198406812.jpg */; };
+		4C2915CF1F513E29006BAB1D /* 15037199411077.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CA1F513E28006BAB1D /* 15037199411077.jpg */; };
+		4C2915D01F513E29006BAB1D /* 15037197790271.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CB1F513E29006BAB1D /* 15037197790271.jpg */; };
+		4C2915D11F513E29006BAB1D /* 15037196879754.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CC1F513E29006BAB1D /* 15037196879754.jpg */; };
+		4C2915D21F513E29006BAB1D /* 15037201516551.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CD1F513E29006BAB1D /* 15037201516551.jpg */; };
 		4C613A121F4BDAE500E645AB /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A111F4BDAE500E645AB /* FileManager.m */; };
 		4C613A151F4C201800E645AB /* MatrixDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A141F4C201800E645AB /* MatrixDataViewController.m */; };
 		4C613A191F4C5DE300E645AB /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A171F4C5DE300E645AB /* CollectionViewCell.m */; };
@@ -32,7 +39,6 @@
 		4CC0F6581F2EC8A900CF78DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6561F2EC8A900CF78DA /* LaunchScreen.storyboard */; };
 		4CC0F6611F2EC91200CF78DA /* FilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0F6601F2EC91200CF78DA /* FilterManager.m */; };
 		4CC0F6631F30B3F400CF78DA /* haizhu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CC0F6621F30B3F400CF78DA /* haizhu.jpeg */; };
-		4CCCF03B1F32026A00C67C22 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCCF03A1F32026A00C67C22 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,14 @@
 		4C1A75C01F36C0BF002C1379 /* SVWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivity.m; sourceTree = "<group>"; };
 		4C1A75C11F36C0BF002C1379 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 		4C1A75C21F36C0BF002C1379 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		4C2915B81F513A24006BAB1D /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4C2915B91F513A24006BAB1D /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4C2915BB1F513A9D006BAB1D /* Color Matrix Filter.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Color Matrix Filter.html"; sourceTree = "<group>"; };
+		4C2915C91F513E28006BAB1D /* 15037198406812.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037198406812.jpg; sourceTree = "<group>"; };
+		4C2915CA1F513E28006BAB1D /* 15037199411077.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037199411077.jpg; sourceTree = "<group>"; };
+		4C2915CB1F513E29006BAB1D /* 15037197790271.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037197790271.jpg; sourceTree = "<group>"; };
+		4C2915CC1F513E29006BAB1D /* 15037196879754.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037196879754.jpg; sourceTree = "<group>"; };
+		4C2915CD1F513E29006BAB1D /* 15037201516551.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037201516551.jpg; sourceTree = "<group>"; };
 		4C613A101F4BDAE500E645AB /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		4C613A111F4BDAE500E645AB /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		4C613A131F4C201800E645AB /* MatrixDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixDataViewController.h; sourceTree = "<group>"; };
@@ -83,8 +97,6 @@
 		4CC0F65F1F2EC91200CF78DA /* FilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterManager.h; sourceTree = "<group>"; };
 		4CC0F6601F2EC91200CF78DA /* FilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterManager.m; sourceTree = "<group>"; };
 		4CC0F6621F30B3F400CF78DA /* haizhu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = haizhu.jpeg; sourceTree = "<group>"; };
-		4CCCF0391F32026A00C67C22 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		4CCCF03A1F32026A00C67C22 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +185,10 @@
 				4C613A111F4BDAE500E645AB /* FileManager.m */,
 				4CC0F64B1F2EC8A900CF78DA /* AppDelegate.h */,
 				4CC0F64C1F2EC8A900CF78DA /* AppDelegate.m */,
+				4C2915B91F513A24006BAB1D /* WebViewController.h */,
+				4C2915B81F513A24006BAB1D /* WebViewController.m */,
 				4CC0F64E1F2EC8A900CF78DA /* ViewController.h */,
 				4CC0F64F1F2EC8A900CF78DA /* ViewController.m */,
-				4CCCF0391F32026A00C67C22 /* WebViewController.h */,
-				4CCCF03A1F32026A00C67C22 /* WebViewController.m */,
 				4C613A131F4C201800E645AB /* MatrixDataViewController.h */,
 				4C613A141F4C201800E645AB /* MatrixDataViewController.m */,
 				4C613A161F4C5DE300E645AB /* CollectionViewCell.h */,
@@ -195,6 +207,12 @@
 		4CC0F6481F2EC8A900CF78DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C2915CC1F513E29006BAB1D /* 15037196879754.jpg */,
+				4C2915CB1F513E29006BAB1D /* 15037197790271.jpg */,
+				4C2915C91F513E28006BAB1D /* 15037198406812.jpg */,
+				4C2915CA1F513E28006BAB1D /* 15037199411077.jpg */,
+				4C2915CD1F513E29006BAB1D /* 15037201516551.jpg */,
+				4C2915BB1F513A9D006BAB1D /* Color Matrix Filter.html */,
 				4CC0F6491F2EC8A900CF78DA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -268,12 +286,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2915C31F513D7C006BAB1D /* Color Matrix Filter.html in Resources */,
+				4C2915D11F513E29006BAB1D /* 15037196879754.jpg in Resources */,
+				4C2915D21F513E29006BAB1D /* 15037201516551.jpg in Resources */,
 				4CC0F6581F2EC8A900CF78DA /* LaunchScreen.storyboard in Resources */,
 				4C1A75CB1F36C0BF002C1379 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
+				4C2915D01F513E29006BAB1D /* 15037197790271.jpg in Resources */,
 				4C1A75CE1F36C0BF002C1379 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
 				4C1A75CA1F36C0BF002C1379 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				4CC0F6631F30B3F400CF78DA /* haizhu.jpeg in Resources */,
+				4C2915CE1F513E29006BAB1D /* 15037198406812.jpg in Resources */,
 				4C613A1A1F4C5DE300E645AB /* CollectionViewCell.xib in Resources */,
+				4C2915CF1F513E29006BAB1D /* 15037199411077.jpg in Resources */,
 				4C1A75C51F36C0BF002C1379 /* SVWebViewController.bundle in Resources */,
 				4C1A75CC1F36C0BF002C1379 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
 				4C1A75C31F36C0BF002C1379 /* SVWebViewController.strings in Resources */,
@@ -292,12 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC0F6501F2EC8A900CF78DA /* ViewController.m in Sources */,
-				4CCCF03B1F32026A00C67C22 /* WebViewController.m in Sources */,
 				4CC0F64D1F2EC8A900CF78DA /* AppDelegate.m in Sources */,
 				4C613A151F4C201800E645AB /* MatrixDataViewController.m in Sources */,
 				4CC0F64A1F2EC8A900CF78DA /* main.m in Sources */,
 				4C1A75C41F36C0BF002C1379 /* SVModalWebViewController.m in Sources */,
 				4C1A75CF1F36C0BF002C1379 /* SVWebViewControllerActivity.m in Sources */,
+				4C2915BA1F513A24006BAB1D /* WebViewController.m in Sources */,
 				4C613A121F4BDAE500E645AB /* FileManager.m in Sources */,
 				4CC0F6611F2EC91200CF78DA /* FilterManager.m in Sources */,
 				4C1A75C61F36C0BF002C1379 /* SVWebViewController.m in Sources */,

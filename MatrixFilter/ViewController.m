@@ -60,9 +60,11 @@
 }
 
 - (IBAction)didTapDetailButton:(id)sender {
-    SVModalWebViewController *webView = [[SVModalWebViewController alloc] initWithURL:[NSURL URLWithString:@"https://liukaiyi54.github.io/osx/2017/04/12/mosaic.html"]];
+    WebViewController *webVC = [[WebViewController alloc] init];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Color Matrix Filter" ofType:@"html"];
+    webVC.path = path;
     
-    [self presentViewController:webView animated:YES completion:nil];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (IBAction)saveData:(UIButton *)sender {
