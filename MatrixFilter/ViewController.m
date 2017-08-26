@@ -13,10 +13,15 @@
 #import "FilterManager.h"
 #import "FileManager.h"
 
+#import <ChameleonFramework/Chameleon.h>
+
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, MatrixDataViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *selectButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFields;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *saveMatrixButton;
 @property (nonatomic, strong) UIImage *cachedImage;
 @property (nonatomic, assign) CGFloat keyboardHeight;
 @property (nonatomic, assign) BOOL isFirstTime;
@@ -38,9 +43,9 @@
     self.imageView.image = [UIImage imageNamed:@"haizhu.jpeg"];
     self.cachedImage = self.imageView.image;
     
-    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(keyboardOnScreen:) name:UIKeyboardDidShowNotification object:nil];
-    [center addObserver:self selector:@selector(showImage) name:UITextFieldTextDidChangeNotification object:nil];
+    [self addNotification];
+    [self configureNavigationBar];
+    [self configureButtons];
 }
 
 - (IBAction)selectPhoto:(UIButton *)sender {
@@ -181,6 +186,26 @@
         }
         self.isFirstTime = NO;
     }
+}
+
+- (void)addNotification {
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(keyboardOnScreen:) name:UIKeyboardDidShowNotification object:nil];
+    [center addObserver:self selector:@selector(showImage) name:UITextFieldTextDidChangeNotification object:nil];
+}
+
+- (void)configureNavigationBar {
+    [self.navigationController setHidesNavigationBarHairline:YES];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor flatMintColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor flatWhiteColor]}];
+}
+
+- (void)configureButtons {
+    self.selectButton.layer.cornerRadius = 6.0f;
+    self.saveButton.layer.cornerRadius = 6.0f;
+    self.saveMatrixButton.layer.cornerRadius = 6.0f;
 }
 
 @end

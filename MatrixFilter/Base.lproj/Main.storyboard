@@ -253,31 +253,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iS-ju-Xxe">
-                                <rect key="frame" x="0.0" y="403" width="187" height="41"/>
+                                <rect key="frame" x="40" y="410" width="144.5" height="36"/>
+                                <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="xSe-0K-PAI"/>
+                                    <constraint firstAttribute="height" constant="36" id="xSe-0K-PAI"/>
                                 </constraints>
-                                <state key="normal" title="选取图片"/>
+                                <state key="normal" title="选取图片">
+                                    <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsE-Vw-NyM"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haizhu.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-fW-zgf">
-                                <rect key="frame" x="16" y="80" width="343" height="328"/>
+                                <rect key="frame" x="16" y="80" width="343" height="315"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmm-yd-bKX">
-                                <rect key="frame" x="141" y="626" width="92" height="30"/>
-                                <state key="normal" title="保存当前滤镜"/>
+                                <rect key="frame" x="117.5" y="626" width="140" height="34"/>
+                                <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="UBw-IE-5pe"/>
+                                    <constraint firstAttribute="height" constant="34" id="W2B-Ee-D2J"/>
+                                </constraints>
+                                <state key="normal" title="保存当前滤镜">
+                                    <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="saveData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fp6-qG-wT2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybg-gJ-lEe">
-                                <rect key="frame" x="187" y="402" width="187.5" height="40"/>
+                                <rect key="frame" x="190.5" y="410" width="144.5" height="36"/>
+                                <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="NSc-Zb-cGg"/>
+                                    <constraint firstAttribute="height" constant="36" id="NSc-Zb-cGg"/>
                                 </constraints>
-                                <state key="normal" title="保存图片"/>
+                                <state key="normal" title="保存图片">
+                                    <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REM-Rt-JGT"/>
                                 </connections>
@@ -306,7 +319,7 @@
                             <constraint firstItem="wFA-fW-zgf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="FVJ-Wy-YdR"/>
                             <constraint firstItem="SK9-ZD-GNK" firstAttribute="leading" secondItem="62y-KM-pG8" secondAttribute="trailing" constant="5" id="Fr1-qn-Pht"/>
                             <constraint firstItem="62y-KM-pG8" firstAttribute="top" secondItem="WYd-MA-kNZ" secondAttribute="bottom" constant="11" id="G2M-lp-fxx"/>
-                            <constraint firstItem="2iS-ju-Xxe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GSp-5Z-FJ8"/>
+                            <constraint firstItem="2iS-ju-Xxe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="GSp-5Z-FJ8"/>
                             <constraint firstItem="SxB-ZU-5Ef" firstAttribute="centerX" secondItem="7CN-AN-dPX" secondAttribute="centerX" id="Gde-Py-bgz"/>
                             <constraint firstItem="Nx8-BN-ale" firstAttribute="centerX" secondItem="Afm-f6-P8K" secondAttribute="centerX" id="HxK-0e-MwT"/>
                             <constraint firstItem="5ps-cK-0uS" firstAttribute="centerX" secondItem="D8j-YP-PEh" secondAttribute="centerX" id="Jaa-hs-1SA"/>
@@ -324,6 +337,7 @@
                             <constraint firstItem="Nyp-KG-y1B" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="S7U-GT-os2"/>
                             <constraint firstItem="30j-P6-zW7" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="Sk3-CQ-HEi"/>
                             <constraint firstItem="62y-KM-pG8" firstAttribute="leading" secondItem="Afm-f6-P8K" secondAttribute="trailing" constant="5" id="TAg-5N-AsA"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KBG-BY-kqq" secondAttribute="trailingMargin" id="U8p-bE-4wP"/>
                             <constraint firstItem="SxB-ZU-5Ef" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="Uaf-ct-qy6"/>
                             <constraint firstItem="hZt-Yf-0Kt" firstAttribute="top" secondItem="ksv-Nb-NbB" secondAttribute="bottom" constant="11" id="UlP-yM-Ivt"/>
                             <constraint firstItem="pmm-yd-bKX" firstAttribute="top" secondItem="utQ-6J-I3s" secondAttribute="bottom" constant="8" id="Uyg-07-f79"/>
@@ -342,19 +356,21 @@
                             <constraint firstItem="30j-P6-zW7" firstAttribute="top" secondItem="Nyp-KG-y1B" secondAttribute="bottom" constant="5" id="dDu-Su-S7V"/>
                             <constraint firstItem="WYd-MA-kNZ" firstAttribute="centerX" secondItem="62y-KM-pG8" secondAttribute="centerX" id="dZ8-ah-qQO"/>
                             <constraint firstItem="utQ-6J-I3s" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="db5-se-Wrq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mql-vG-FoY" secondAttribute="trailingMargin" id="eF4-f2-ekG"/>
                             <constraint firstItem="Nyp-KG-y1B" firstAttribute="leading" secondItem="Afm-f6-P8K" secondAttribute="leading" id="eIQ-Jx-Ow5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dob-RS-ZPx" secondAttribute="trailingMargin" id="eTx-vF-Quy"/>
                             <constraint firstItem="Tls-Tl-6CQ" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="fIA-Ed-xvj"/>
                             <constraint firstItem="wFA-fW-zgf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fq2-L5-s7N"/>
                             <constraint firstItem="62y-KM-pG8" firstAttribute="centerY" secondItem="Afm-f6-P8K" secondAttribute="centerY" id="ghP-NH-2fQ"/>
                             <constraint firstItem="Afm-f6-P8K" firstAttribute="top" secondItem="Nx8-BN-ale" secondAttribute="bottom" constant="10" id="gn8-QF-Tf6"/>
                             <constraint firstItem="5ps-cK-0uS" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="h0N-HV-hOQ"/>
-                            <constraint firstItem="SK9-ZD-GNK" firstAttribute="top" secondItem="wFA-fW-zgf" secondAttribute="bottom" constant="75" id="jDu-eL-CaM"/>
+                            <constraint firstItem="SK9-ZD-GNK" firstAttribute="top" secondItem="wFA-fW-zgf" secondAttribute="bottom" constant="88" id="jDu-eL-CaM"/>
                             <constraint firstItem="SxB-ZU-5Ef" firstAttribute="centerY" secondItem="pRJ-zt-kzU" secondAttribute="centerY" id="jQr-sG-TM5"/>
                             <constraint firstItem="Wme-nW-TmG" firstAttribute="centerY" secondItem="Afm-f6-P8K" secondAttribute="centerY" id="jct-WZ-Qsz"/>
                             <constraint firstItem="N7M-Ks-7ZT" firstAttribute="centerX" secondItem="MZ0-4w-dZO" secondAttribute="centerX" id="kDf-dY-T2k"/>
-                            <constraint firstAttribute="trailing" secondItem="ybg-gJ-lEe" secondAttribute="trailing" id="kig-7Y-jeo"/>
+                            <constraint firstAttribute="trailing" secondItem="ybg-gJ-lEe" secondAttribute="trailing" constant="40" id="kig-7Y-jeo"/>
                             <constraint firstItem="MZ0-4w-dZO" firstAttribute="centerY" secondItem="30j-P6-zW7" secondAttribute="centerY" id="lOa-i9-WuT"/>
-                            <constraint firstItem="ybg-gJ-lEe" firstAttribute="leading" secondItem="2iS-ju-Xxe" secondAttribute="trailing" id="ljH-tY-sgF"/>
+                            <constraint firstItem="ybg-gJ-lEe" firstAttribute="leading" secondItem="2iS-ju-Xxe" secondAttribute="trailing" constant="6" id="ljH-tY-sgF"/>
                             <constraint firstItem="D8j-YP-PEh" firstAttribute="leading" secondItem="hZt-Yf-0Kt" secondAttribute="trailing" constant="5" id="mVi-XG-jna"/>
                             <constraint firstItem="QhP-cx-oNa" firstAttribute="centerX" secondItem="5ps-cK-0uS" secondAttribute="centerX" id="nN1-7h-8qy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mql-vG-FoY" secondAttribute="leading" id="ngK-I1-boy"/>
@@ -362,11 +378,11 @@
                             <constraint firstItem="Gqs-wd-ydg" firstAttribute="centerX" secondItem="D8j-YP-PEh" secondAttribute="centerX" id="oiR-jQ-6jS"/>
                             <constraint firstItem="utQ-6J-I3s" firstAttribute="centerY" secondItem="N7M-Ks-7ZT" secondAttribute="centerY" id="onP-RO-Laf"/>
                             <constraint firstItem="Hj0-0r-zL8" firstAttribute="centerY" secondItem="Nyp-KG-y1B" secondAttribute="centerY" id="p6b-ME-2tX"/>
-                            <constraint firstItem="ybg-gJ-lEe" firstAttribute="top" secondItem="wFA-fW-zgf" secondAttribute="bottom" constant="-6" id="qCC-CN-Aav"/>
+                            <constraint firstItem="ybg-gJ-lEe" firstAttribute="top" secondItem="wFA-fW-zgf" secondAttribute="bottom" constant="15" id="qCC-CN-Aav"/>
                             <constraint firstAttribute="leadingMargin" secondItem="KBG-BY-kqq" secondAttribute="leading" id="qGf-Gg-0Ob"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wFA-fW-zgf" secondAttribute="trailing" id="qU4-2s-b2e"/>
                             <constraint firstItem="JK7-d7-S8u" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="qZR-Sa-uxy"/>
-                            <constraint firstItem="2iS-ju-Xxe" firstAttribute="top" secondItem="wFA-fW-zgf" secondAttribute="bottom" constant="-5" id="qoD-MV-Lcs"/>
+                            <constraint firstItem="2iS-ju-Xxe" firstAttribute="top" secondItem="wFA-fW-zgf" secondAttribute="bottom" constant="15" id="qoD-MV-Lcs"/>
                             <constraint firstItem="JK7-d7-S8u" firstAttribute="centerY" secondItem="2Gk-Es-Qsb" secondAttribute="centerY" id="szq-Ve-IaN"/>
                             <constraint firstItem="pRJ-zt-kzU" firstAttribute="centerX" secondItem="5re-xh-DuU" secondAttribute="centerX" id="tXu-fy-MuZ"/>
                             <constraint firstItem="D8j-YP-PEh" firstAttribute="width" secondItem="Afm-f6-P8K" secondAttribute="width" id="thr-i8-5rQ"/>
@@ -392,6 +408,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="wFA-fW-zgf" id="uVp-Vh-92r"/>
+                        <outlet property="saveButton" destination="ybg-gJ-lEe" id="ocg-Wa-Xec"/>
+                        <outlet property="saveMatrixButton" destination="pmm-yd-bKX" id="GkT-bA-vvb"/>
+                        <outlet property="selectButton" destination="2iS-ju-Xxe" id="xqe-e2-vYd"/>
                         <outletCollection property="textFields" destination="Afm-f6-P8K" id="KFz-nM-lWz"/>
                         <outletCollection property="textFields" destination="62y-KM-pG8" id="akP-iI-h4U"/>
                         <outletCollection property="textFields" destination="SK9-ZD-GNK" id="HkL-Kz-ci1"/>

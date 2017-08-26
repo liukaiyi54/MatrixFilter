@@ -1,0 +1,6 @@
+framework module Pods_MatrixFilter {
+  umbrella header "Pods-MatrixFilter-umbrella.h"
+
+  export *
+  module * { export * }
+}
