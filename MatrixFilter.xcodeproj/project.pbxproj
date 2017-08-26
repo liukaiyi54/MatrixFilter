@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		429A81D1725CF1FF264E34DD /* Pods_MatrixFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F759154B771D32BAAFFADA0 /* Pods_MatrixFilter.framework */; };
 		4C2915BA1F513A24006BAB1D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2915B81F513A24006BAB1D /* WebViewController.m */; };
-		4C2915C31F513D7C006BAB1D /* Color Matrix Filter.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915BB1F513A9D006BAB1D /* Color Matrix Filter.html */; };
-		4C2915CE1F513E29006BAB1D /* 15037198406812.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915C91F513E28006BAB1D /* 15037198406812.jpg */; };
-		4C2915CF1F513E29006BAB1D /* 15037199411077.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CA1F513E28006BAB1D /* 15037199411077.jpg */; };
-		4C2915D01F513E29006BAB1D /* 15037197790271.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CB1F513E29006BAB1D /* 15037197790271.jpg */; };
-		4C2915D11F513E29006BAB1D /* 15037196879754.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CC1F513E29006BAB1D /* 15037196879754.jpg */; };
-		4C2915D21F513E29006BAB1D /* 15037201516551.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2915CD1F513E29006BAB1D /* 15037201516551.jpg */; };
+		4C2AD3171F518533009FD7FC /* Color Matrix Filter.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3101F518511009FD7FC /* Color Matrix Filter.html */; };
+		4C2AD3181F518533009FD7FC /* 15037418592287.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3131F51851E009FD7FC /* 15037418592287.jpg */; };
+		4C2AD3191F518533009FD7FC /* 15037418850748.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3121F51851E009FD7FC /* 15037418850748.jpg */; };
+		4C2AD31A1F518533009FD7FC /* 15037419048447.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3161F51851E009FD7FC /* 15037419048447.jpg */; };
+		4C2AD31B1F518533009FD7FC /* 15037419350371.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3141F51851E009FD7FC /* 15037419350371.jpg */; };
+		4C2AD31C1F518533009FD7FC /* 15037419670570.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3111F51851E009FD7FC /* 15037419670570.jpg */; };
+		4C2AD31D1F518533009FD7FC /* 15037424757850.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C2AD3151F51851E009FD7FC /* 15037424757850.jpg */; };
 		4C613A121F4BDAE500E645AB /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A111F4BDAE500E645AB /* FileManager.m */; };
 		4C613A151F4C201800E645AB /* MatrixDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A141F4C201800E645AB /* MatrixDataViewController.m */; };
 		4C613A191F4C5DE300E645AB /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C613A171F4C5DE300E645AB /* CollectionViewCell.m */; };
@@ -33,12 +34,13 @@
 		0F759154B771D32BAAFFADA0 /* Pods_MatrixFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2915B81F513A24006BAB1D /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4C2915B91F513A24006BAB1D /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		4C2915BB1F513A9D006BAB1D /* Color Matrix Filter.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Color Matrix Filter.html"; sourceTree = "<group>"; };
-		4C2915C91F513E28006BAB1D /* 15037198406812.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037198406812.jpg; sourceTree = "<group>"; };
-		4C2915CA1F513E28006BAB1D /* 15037199411077.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037199411077.jpg; sourceTree = "<group>"; };
-		4C2915CB1F513E29006BAB1D /* 15037197790271.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037197790271.jpg; sourceTree = "<group>"; };
-		4C2915CC1F513E29006BAB1D /* 15037196879754.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037196879754.jpg; sourceTree = "<group>"; };
-		4C2915CD1F513E29006BAB1D /* 15037201516551.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037201516551.jpg; sourceTree = "<group>"; };
+		4C2AD3101F518511009FD7FC /* Color Matrix Filter.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Color Matrix Filter.html"; sourceTree = "<group>"; };
+		4C2AD3111F51851E009FD7FC /* 15037419670570.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037419670570.jpg; sourceTree = "<group>"; };
+		4C2AD3121F51851E009FD7FC /* 15037418850748.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037418850748.jpg; sourceTree = "<group>"; };
+		4C2AD3131F51851E009FD7FC /* 15037418592287.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037418592287.jpg; sourceTree = "<group>"; };
+		4C2AD3141F51851E009FD7FC /* 15037419350371.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037419350371.jpg; sourceTree = "<group>"; };
+		4C2AD3151F51851E009FD7FC /* 15037424757850.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037424757850.jpg; sourceTree = "<group>"; };
+		4C2AD3161F51851E009FD7FC /* 15037419048447.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15037419048447.jpg; sourceTree = "<group>"; };
 		4C613A101F4BDAE500E645AB /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		4C613A111F4BDAE500E645AB /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		4C613A131F4C201800E645AB /* MatrixDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixDataViewController.h; sourceTree = "<group>"; };
@@ -124,12 +126,13 @@
 		4CC0F6481F2EC8A900CF78DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C2915CC1F513E29006BAB1D /* 15037196879754.jpg */,
-				4C2915CB1F513E29006BAB1D /* 15037197790271.jpg */,
-				4C2915C91F513E28006BAB1D /* 15037198406812.jpg */,
-				4C2915CA1F513E28006BAB1D /* 15037199411077.jpg */,
-				4C2915CD1F513E29006BAB1D /* 15037201516551.jpg */,
-				4C2915BB1F513A9D006BAB1D /* Color Matrix Filter.html */,
+				4C2AD3101F518511009FD7FC /* Color Matrix Filter.html */,
+				4C2AD3131F51851E009FD7FC /* 15037418592287.jpg */,
+				4C2AD3121F51851E009FD7FC /* 15037418850748.jpg */,
+				4C2AD3161F51851E009FD7FC /* 15037419048447.jpg */,
+				4C2AD3141F51851E009FD7FC /* 15037419350371.jpg */,
+				4C2AD3111F51851E009FD7FC /* 15037419670570.jpg */,
+				4C2AD3151F51851E009FD7FC /* 15037424757850.jpg */,
 				4CC0F6491F2EC8A900CF78DA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -224,15 +227,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2915C31F513D7C006BAB1D /* Color Matrix Filter.html in Resources */,
-				4C2915D11F513E29006BAB1D /* 15037196879754.jpg in Resources */,
-				4C2915D21F513E29006BAB1D /* 15037201516551.jpg in Resources */,
+				4C2AD3171F518533009FD7FC /* Color Matrix Filter.html in Resources */,
+				4C2AD3181F518533009FD7FC /* 15037418592287.jpg in Resources */,
+				4C2AD3191F518533009FD7FC /* 15037418850748.jpg in Resources */,
+				4C2AD31A1F518533009FD7FC /* 15037419048447.jpg in Resources */,
+				4C2AD31B1F518533009FD7FC /* 15037419350371.jpg in Resources */,
+				4C2AD31C1F518533009FD7FC /* 15037419670570.jpg in Resources */,
+				4C2AD31D1F518533009FD7FC /* 15037424757850.jpg in Resources */,
 				4CC0F6581F2EC8A900CF78DA /* LaunchScreen.storyboard in Resources */,
-				4C2915D01F513E29006BAB1D /* 15037197790271.jpg in Resources */,
 				4CC0F6631F30B3F400CF78DA /* haizhu.jpeg in Resources */,
-				4C2915CE1F513E29006BAB1D /* 15037198406812.jpg in Resources */,
 				4C613A1A1F4C5DE300E645AB /* CollectionViewCell.xib in Resources */,
-				4C2915CF1F513E29006BAB1D /* 15037199411077.jpg in Resources */,
 				4CC0F6551F2EC8A900CF78DA /* Assets.xcassets in Resources */,
 				4CC0F6531F2EC8A900CF78DA /* Main.storyboard in Resources */,
 			);

@@ -25,6 +25,7 @@
 @property (nonatomic, strong) UIImage *cachedImage;
 @property (nonatomic, assign) CGFloat keyboardHeight;
 @property (nonatomic, assign) BOOL isFirstTime;
+@property (nonatomic, assign) BOOL fromSavingTextField;
 
 @end
 
@@ -46,11 +47,6 @@
     [self addNotification];
     [self configureNavigationBar];
     [self configureButtons];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
 }
 
 - (IBAction)selectPhoto:(UIButton *)sender {
@@ -79,6 +75,8 @@
 
 - (IBAction)saveData:(UIButton *)sender {
     NSMutableArray *matrix = [[NSMutableArray alloc] initWithCapacity:20];
+    
+    self.fromSavingTextField = YES;
     
     for (NSInteger i = 0; i < self.textFields.count; i++) {
         UITextField *textField = self.textFields[i];
@@ -180,16 +178,19 @@
     
     self.keyboardHeight = CGRectGetHeight(keyboardFrame);
     
-    if (self.isFirstTime || self.keyboardHeight > 216) {
-        CGFloat offset = 42 - self.keyboardHeight;
-        if (offset <= 0) {
-            [UIView animateWithDuration:0.3 animations:^{
-                CGRect frame = self.view.frame;
-                frame.origin.y = offset;
-                self.view.frame = frame;
-            }];
+    if (!self.fromSavingTextField) {
+        if (self.isFirstTime || self.keyboardHeight > 216) {
+            CGFloat offset = 42 - self.keyboardHeight;
+            if (offset <= 0) {
+                [UIView animateWithDuration:0.3 animations:^{
+                    CGRect frame = self.view.frame;
+                    frame.origin.y = offset;
+                    self.view.frame = frame;
+                }];
+            }
+            self.isFirstTime = NO;
         }
-        self.isFirstTime = NO;
+        self.fromSavingTextField = YES;
     }
 }
 
