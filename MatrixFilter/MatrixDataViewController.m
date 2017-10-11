@@ -11,6 +11,7 @@
 #import "CollectionViewCell.h"
 
 #import "FileManager.h"
+#import <ChameleonFramework/Chameleon.h>
 
 static NSString *const kCollectionViewCell = @"kCollectionViewCell";
 
@@ -39,6 +40,7 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
     self.showDeleteButton = NO;
     if ([FileManager sharedInstance].file.count == 0) {
         self.navigationItem.rightBarButtonItem = nil;
+        [self.view addSubview:[self defaultLabel]];
     } else {
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"edit"] style:UIBarButtonItemStylePlain target:self action:@selector(didTapEdit:)];
         [item setImageInsets:UIEdgeInsetsMake(10, 0, 0, 0)];
@@ -135,6 +137,16 @@ static NSString *const kCollectionViewCell = @"kCollectionViewCell";
 
 - (void)didTapBack {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (UILabel *)defaultLabel {
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"暂无滤镜，快去创建吧！";
+    label.font = [UIFont systemFontOfSize:22];
+    [label sizeToFit];
+    label.textColor = [UIColor flatGrayColor];
+    label.center = self.view.center;
+    return label;
 }
 
 @end
